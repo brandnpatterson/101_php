@@ -1,0 +1,24 @@
+{
+  "name": "php_101",
+  "version": "1.0.0",
+  "description": "PHP Fundamentals",
+  "main": "index.php",
+  "scripts": {
+    "start": "gulp clean && gulp"
+  },
+  "author": "Brandon Patterson",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/brandnpatterson/php_101"
+  }
+}

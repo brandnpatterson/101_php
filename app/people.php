@@ -1,4 +1,4 @@
-<?php
+<?php include 'classes/person.php';
 
 $brandon = new Person('Brandon', 29);
 $lauren = new Person('Lauren', 24);
