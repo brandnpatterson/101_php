@@ -16,24 +16,18 @@
         <h3>People:</h3>
       </div>
       <ul class="people">
-        <?php
-          foreach ($people as $p) {
-        ?>
+        <?php foreach ($people as $p) { ?>
           <li>
             <button>
-            <?php
-              $p->getName();
-            ?>
+            <?= $p->getName(); ?>
             </button>
             <a href="#">Edit</a>
             <a href="#">Delete</a>
           </li>
-        <?php
-          }
-        ?>
+        <?php } ?>
       </ul>
     </div>
-    <form method="post" class="submit-person">
+    <form method="post" action="../app/classes/class_data_operation.php" class="submit-person">
       <div class="formgroup">
         <label for="name"> Name
           <input type="text" name="name">
@@ -45,10 +39,7 @@
         </label>
       </div>
       <div class="formgroup">
-        <button type="submit" name="save">Save</button>
-      </div>
-      <div class="formgroup">
-        <a href="https://www.youtube.com/watch?v=mjVuBlwXASo">Resource</a>
+        <button type="submit" name="submit">Submit</button>
       </div>
     </form>
   </body>
