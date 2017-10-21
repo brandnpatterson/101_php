@@ -1,4 +1,4 @@
-<?php include '../app/people.php'; ?>
+<?php require __DIR__ . '/../app/controllers/person_controller.php'; ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -16,18 +16,21 @@
         <h3>People:</h3>
       </div>
       <ul class="people">
-        <?php foreach ($people as $p) { ?>
+        <?php while ($p = $getPeople->fetch_object()) { ?>
           <li>
             <button>
-            <?= $p->getName(); ?>
+            <?= "$p->name $p->age"; ?>
             </button>
             <a href="#">Edit</a>
             <a href="#">Delete</a>
           </li>
-        <?php } ?>
+        <?php }
+        $getPeople->free(); ?>
+
+
       </ul>
     </div>
-    <form method="post" action="../app/classes/class_data_operation.php" class="submit-person">
+    <form method="post" action="../app/controllers/person_controller.php" class="submit-person">
       <div class="formgroup">
         <label for="name"> Name
           <input type="text" name="name">

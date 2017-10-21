@@ -2,7 +2,7 @@
 
 class Database
 {
-	public $db_connection;
+	public $db;
 	public $db_host = 'localhost';
 	public $db_user = 'root';
 	public $db_pass = '';
@@ -10,7 +10,12 @@ class Database
 
 	public function __construct ()
 	{
-		$this->db_connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
+		$this->db = new mysqli(
+			$this->db_host,
+			$this->db_user,
+			$this->db_pass,
+			$this->db_name
+		);
 	}
 }
 
