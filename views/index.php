@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>PHP 101</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../public/css/style.css">
   </head>
   <body>
     <div class="heading">
@@ -26,8 +26,6 @@
           </li>
         <?php }
         $getPeople->free(); ?>
-
-
       </ul>
     </div>
     <form method="post" action="../app/controllers/person_controller.php" class="submit-person">
